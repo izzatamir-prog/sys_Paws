@@ -1,0 +1,111 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: #ee80b2;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.cat-container {
+    width: 90%;
+    max-width: 400px;
+    height: 500px;
+    margin: 0 auto;
+    position: relative;
+    perspective: 1000px;
+}
+
+.cat-card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    overflow: hidden;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    will-change: transform;
+}
+
+.cat-card img {
+    width: 100%;
+    height: 85%;
+    object-fit: cover;
+}
+
+.cat-info {
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.results {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.liked-cats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.liked-cats img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+button {
+    padding: 10px 20px;
+    background: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #e05656;
+}
+
+/* Animation classes for swipe */
+.swipe-left {
+    transform: translateX(-100%) rotate(-20deg);
+    opacity: 0;
+}
+
+.swipe-right {
+    transform: translateX(100%) rotate(20deg);
+    opacity: 0;
+}
+.cat-card {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    will-change: transform;
+}
+
+.cat-card.swipe-left {
+    transform: translateX(-100%) rotate(-20deg);
+    opacity: 0;
+}
+
+.cat-card.swipe-right {
+    transform: translateX(100%) rotate(20deg);
+    opacity: 0;
+}
+.header h1,
+.header p,
+.results h2,
+#resultsText {
+    color: aliceblue;
+}
